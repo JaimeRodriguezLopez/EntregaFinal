@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.finaleddmdp.proyectofinal.MenuPrincipalController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Label text="Conquista de conocimientos">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font></Label>
+   <Button fx:id="nuevaPartidaButton" mnemonicParsing="false" onAction="#onStartGameButtonClick" text="Nueva Partida" />
+   <Button fx:id="cargarPartidaButton" mnemonicParsing="false" onAction="#onCargarPartidaButtonClick" text="Cargar Partida" />
+   <Button fx:id="verTablerosButton" mnemonicParsing="false" onAction="#onVerTablerosButtonClick" text="Tableros" />
+   <Button fx:id="verLogsButton" mnemonicParsing="false" onAction="#onVerLogsButtonClick" text="Ver Logs" />
+
+   <Button fx:id="exitGameButton" mnemonicParsing="false" onAction="#onExitButtonClick" text="Salir del Juego" />
+   <Label prefHeight="18.0" prefWidth="220.0" text="Esto es un diseño temprano de pantallas" textAlignment="CENTER" />
+   <Label text="ninguna funcion que requiera codigo funcionara" />
+   <Label text="Esto es simplemente una visualizacion de como " />
+   <Label text="podrian verse las funciones" />
+</VBox>

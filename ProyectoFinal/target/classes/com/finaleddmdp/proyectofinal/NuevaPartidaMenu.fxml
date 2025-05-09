@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.finaleddmdp.proyectofinal.NuevaPartidaMenuController">
+   <children>
+      <Label text="Nueva Partida">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Label alignment="TOP_CENTER" text="Lista de Tableros" />
+            <ChoiceBox prefWidth="150.0" />
+         </children></VBox>
+      <Label text="Si se empieza una partida sin seleccionar tablero," />
+      <Label text="se utilizara uno sin modificadores especiales base nxn." />
+      <Button fx:id="crearNuevoTableroButton" mnemonicParsing="false" onAction="#onCrearNuevoTableroClick" text="Crear Nuevo Tablero">
+         <opaqueInsets>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </opaqueInsets>
+      </Button>
+      <Button fx:id="NuevaPartidaEmpezarPartida" mnemonicParsing="false" text="Empezar Partida" />
+      <Button fx:id="volverMenuPrincipalButton" mnemonicParsing="false" onAction="#onVolverMenuPrincipalButtonClick" text="Volver Menu Principal" />
+   </children>
+</VBox>

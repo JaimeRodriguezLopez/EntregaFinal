@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.finaleddmdp.proyectofinal.TablerosMenuController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <Label text="Vista, creación y edicion de tableros">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ChoiceBox prefWidth="150.0" />
+      <Button mnemonicParsing="false" text="Editar tablero" />
+      <Label text="Abriría el tablero seleccionado pero solo para añadir atributos especiales (Ir por ruta de Nueva Partida)" />
+      <Button fx:id="volverMenuPrincipalButton" mnemonicParsing="false" onAction="#onvolverMenuPrincipalButtonClick" text="Volver Menu Principal" />
+   </children>
+</VBox>
