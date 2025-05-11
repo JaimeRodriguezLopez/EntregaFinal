@@ -1,6 +1,11 @@
 package ProgramaPrincipal;
 
+import com.google.gson.Gson;
 import org.jetbrains.annotations.NotNull;
+
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Tablero {
     private NodoTablero[][] nodoTablero;
@@ -158,6 +163,48 @@ public class Tablero {
             atacante.atacar(objetivo);
         } else {
             System.out.println(atacante.getNombre() + " está fuera de rango para atacar a " + objetivo.getNombre());
+        }
+    }
+    public boolean guardarTablero(Tablero tablero, String ruta) {
+        Gson gson = new Gson();
+        try(FileWriter fw = new FileWriter(ruta)) {
+            gson.toJson(tablero, fw);
+            return true;
+        }
+        catch (IOException e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+    public boolean guardarTablero(Tablero tablero) {
+        Gson gson = new Gson();
+        try(FileWriter fw = new FileWriter("Tablero.json")){
+            gson.toJson(tablero, fw);
+            return true;
+        }
+        catch (IOException e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+    public Tablero leerTablero(String ruta) {
+        Gson gson = new Gson();
+        try(FileReader fr = new FileReader(ruta)) {
+            return gson.fromJson(fr, Tablero.class);
+        }
+        catch (IOException e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+    public Tablero leerTablero() {
+        Gson gson = new Gson();
+        try(FileReader fr = new FileReader("Tablero.json")){
+            return gson.fromJson(fr, Tablero.class);
+        }
+        catch (IOException e){
+            e.printStackTrace();
+            return null;
         }
     }
 
