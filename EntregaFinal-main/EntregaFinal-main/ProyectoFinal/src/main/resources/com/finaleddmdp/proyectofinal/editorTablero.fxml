@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/17"
+            fx:controller="com.finaleddmdp.proyectofinal.EditorTableroController">
+    <GridPane fx:id="gridTablero"
+              AnchorPane.topAnchor="30"
+              AnchorPane.bottomAnchor="00"
+              AnchorPane.leftAnchor="30"
+              AnchorPane.rightAnchor="30"/>
+    <Button text="Terminar y Generar Tablero" onAction="#onTerminarButtonClick"/>
+</AnchorPane>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.finaleddmdp.proyectofinal.PrimerMenuCreacionDeTablerosController">
+   <children>
+      <Label layoutX="253.0" layoutY="46.0" text="Nombre del tablero" />
+      <Button fx:id="cancelarButton" layoutX="248.0" layoutY="306.0" mnemonicParsing="false" onAction="#onCancelarButtonClick" prefHeight="25.0" prefWidth="105.0" text="Cancelar" />
+      <Label layoutX="206.0" layoutY="331.0" text="Perderas todo el progreso si cancelas" />
+      <Label layoutX="228.0" layoutY="14.0" text="Creacion de tablero Parte 1">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nombreTableroTextField" layoutX="230.0" layoutY="63.0" />
+      <Label layoutX="240.0" layoutY="88.0" text="Dimensiones del tablero" />
+      <TextField fx:id="anchoTableroTextField" layoutX="322.0" layoutY="105.0" prefHeight="26.0" prefWidth="35.0" />
+      <Label layoutX="300.0" layoutY="109.0" prefHeight="17.0" prefWidth="10.0" text="x" />
+      <Line endX="100.0" layoutX="148.0" layoutY="107.0" startX="100.0" startY="21.0" />
+      <Line endX="-77.0" layoutX="459.0" layoutY="118.0" startX="-100.0" />
+      <Button fx:id="continuarButton" layoutX="260.0" layoutY="270.0" mnemonicParsing="false" onAction="#onContinuarButtonClick" prefHeight="25.0" prefWidth="80.0" text="Continuar" />
+      <TextField fx:id="alturaTableroTextField" layoutX="253.0" layoutY="105.0" prefHeight="25.0" prefWidth="35.0" />
+   </children>
+</AnchorPane>
