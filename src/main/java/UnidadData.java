@@ -28,13 +28,13 @@ public class UnidadData {
     //Lo vamos a usar para, una vez tenemos los datos, crear la unidad a los que corresponde
     public Unidad crearUnidad() {
         Unidad unidad = null;
-        if(nombre.equals("CentralNuclear")) {
+        if(nombre.equals("Central Nuclear")) {
             unidad = new CentralNuclear();
         }
-        else if(nombre.equals("CentralEolica")) {
+        else if(nombre.equals("Central Eolica")) {
             unidad = new CentralEolica();
         }
-        else if(nombre.equals("CentralHidroelectrica")) {
+        else if(nombre.equals("Central Hidroelectrica")) {
             unidad = new CentralHidroelectrica();
         }
         else if(nombre.equals("Malware")) {

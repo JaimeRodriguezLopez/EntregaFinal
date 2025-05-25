@@ -21,7 +21,7 @@ public class Partida {
     }
 
     public void inicializar() {
-        // Crear unidades del jugador
+        //Creamos las unidades para el humano
         CentralNuclear centralNuclear = new CentralNuclear();
         CentralEolica centralEolica = new CentralEolica();
 
@@ -31,7 +31,7 @@ public class Partida {
         unidadesJugador.add(centralNuclear);
         unidadesJugador.add(centralEolica);
 
-        // Crear unidades de la IA
+        //Las de la ia
         Malware malware = new Malware();
         Ransomware ransomware = new Ransomware();
 
@@ -46,13 +46,10 @@ public class Partida {
         if (!turnoJugador || !unidadesJugador.contieneElemento(unidad)) {
             return;
         }
-
         ejecutarAccion(unidad, accion, xDestino, yDestino);
-
         turnoJugador = false;
         turnos++;
-
-        if (turnos % frecuenciaNuevaUnidad == 0) {
+        if (turnos % frecuenciaNuevaUnidad == 0) { //Queremos que aparezcan nuevas unidades, para ello, cada vez que se cumplan los turnos establecidos, al dividir y dar resto 0, se verifica la condicion
             generarNuevaUnidad();
         }
     }
@@ -64,11 +61,9 @@ public class Partida {
             Casilla casillaDestino = tablero.getCasilla(xDestino, yDestino);
             if (casillaDestino != null && casillaDestino.isOcupada()) {
                 Unidad objetivo = casillaDestino.getUnidad();
-
-                // Verificar si es enemigo (diferente tipo)
+                //No queremos que haya fuego amigo, por tanto, verificamos que sea enemigo
                 if (objetivo.esEnergia() != unidad.esEnergia()) {
                     unidad.atacar(objetivo,tablero);
-
                     if (objetivo.estaMuerta()) {
                         eliminarUnidad(objetivo);
                     }
@@ -83,17 +78,16 @@ public class Partida {
         }
 
         for (int i = 0; i < unidadesIA.getNumElementos(); i++) {
-            Unidad tmp = unidadesIA.getElemento(i);//Tmp es la unidad con la que la ia esta actuando
+            Unidad tmp = unidadesIA.getElemento(i);//Tmp es la unidad que va a usar la ia
             Unidad objetivo = encontrarObjetivoMasCercano(tmp);
 
             if (objetivo != null) {
                 Posicion posUnidad = tmp.getPosicion();
                 Posicion posObjetivo = objetivo.getPosicion();
 
-                int distancia = Math.abs(posUnidad.getX() - posObjetivo.getX()) +
-                        Math.abs(posUnidad.getY() - posObjetivo.getY());
+                int distancia = Math.abs(posUnidad.getX() - posObjetivo.getX()) + Math.abs(posUnidad.getY() - posObjetivo.getY());
 
-                if (distancia <= tmp.getRangoAtaque()) {
+                if (distancia <= tmp.getRangoAtaque()) { //Hemos establecido que la prioridad para la ia es que ataque si puede
                     tmp.atacar(objetivo,tablero);
 
                     if (objetivo.estaMuerta()) {
@@ -194,7 +188,7 @@ public class Partida {
     }
 
     private void colocarNuevaUnidad(Unidad nuevaUnidad, ListaBasica<Unidad> listaUnidades) {
-        for (int i=1; i< listaUnidades.getNumElementos();i++){
+        for (int i=0; i< listaUnidades.getNumElementos();i++){
             Unidad unidad = listaUnidades.getElemento(i);
             Posicion pos = unidad.getPosicion();
             int x = pos.getX();
