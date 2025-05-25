@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>module-info.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+.s1 { color: #bcbec4;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+module-info.java</font>
+</center></td></tr></table>
+<pre><span class="s0">module com</span><span class="s1">.</span><span class="s0">example</span><span class="s1">.</span><span class="s0">practicaultima </span><span class="s1">{</span>
+    <span class="s0">requires javafx</span><span class="s1">.</span><span class="s0">controls</span><span class="s1">;</span>
+    <span class="s0">requires javafx</span><span class="s1">.</span><span class="s0">fxml</span><span class="s1">;</span>
+
+    <span class="s0">requires org</span><span class="s1">.</span><span class="s0">controlsfx</span><span class="s1">.</span><span class="s0">controls</span><span class="s1">;</span>
+    <span class="s0">requires com</span><span class="s1">.</span><span class="s0">dlsc</span><span class="s1">.</span><span class="s0">formsfx</span><span class="s1">;</span>
+    <span class="s0">requires org</span><span class="s1">.</span><span class="s0">kordamp</span><span class="s1">.</span><span class="s0">bootstrapfx</span><span class="s1">.</span><span class="s0">core</span><span class="s1">;</span>
+
+    <span class="s0">opens com</span><span class="s1">.</span><span class="s0">example</span><span class="s1">.</span><span class="s0">practicaultima to javafx</span><span class="s1">.</span><span class="s0">fxml</span><span class="s1">;</span>
+    <span class="s0">exports com</span><span class="s1">.</span><span class="s0">example</span><span class="s1">.</span><span class="s0">practicaultima</span><span class="s1">;</span>
+<span class="s1">}</span></pre>
+</body>
+</html>
