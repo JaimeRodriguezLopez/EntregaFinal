@@ -21,25 +21,29 @@ public class GestorJSON {
     }
 
     public static Partida cargarPartida(String nombreArchivo) throws IOException {
-        EstadoJuego estado;
+        EstadoJuego estado = null;
         try (FileReader reader = new FileReader(nombreArchivo + ".json")) {
             estado = gson.fromJson(reader, EstadoJuego.class);
+        }
+        catch (IOException e) {
+            System.out.println("El archivo no existe");
+            e.printStackTrace();
         }
         return reconstruirPartida(estado);
     }
     private static Partida reconstruirPartida(EstadoJuego estado) {
+        Casilla[][] casillareconstruida = new Casilla[estado.getFilas()][estado.getColumnas()];
         Partida partida = new Partida(estado.getFilas(), estado.getColumnas(), estado.getFrecuenciaNuevaUnidad());
-        //Primero reconstruimos el tablero
+        //Primero reconstruimos el tablero (Ojo, las unidades aun no las metemos, solo las casillas)
         Tablero tablero = partida.getTablero();
         for (int i = 0; i < estado.getFilas(); i++) {
             for (int j = 0; j < estado.getColumnas(); j++) {
                 CasillaData casillaData = estado.getCasillasData()[i][j];
-                // Aquí necesitarías un método para establecer la casilla en el tablero
-                // o modificar el constructor del tablero para aceptar datos predefinidos
+                casillareconstruida[i][j] = new Casilla(casillaData.getCostoMovimiento(),casillaData.getModificadorDefensa());
             }
         }
 
-        // Reconstruir unidades del jugador
+        //Reconstruimos las unidades del jugador
         partida.getUnidadesJugador().clear();
         for (UnidadData unidadData : estado.getUnidadesJugador()) {
             Unidad unidad = unidadData.crearUnidad();
@@ -47,7 +51,7 @@ public class GestorJSON {
             tablero.colocarUnidad(unidad, unidadData.getPosicionX(), unidadData.getPosicionY());
         }
 
-        // Reconstruir unidades IA
+        //Ahora lo mismo con las ia
         partida.getUnidadesIA().clear();
         for (UnidadData unidadData : estado.getUnidadesIA()) {
             Unidad unidad = unidadData.crearUnidad();

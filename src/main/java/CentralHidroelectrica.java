@@ -7,10 +7,10 @@ public class CentralHidroelectrica extends UnidadEnergia{
         if (this.getMaximoUsoHabilidad() <= 0){
             return;
         }
-        for (int i=0; tablero.obtenerTodasLasUnidades().getNumElementos()<i;i++){//(Unidad obj : tablero.obtenerTodasLasUnidades() ) {
+        for (int i=0; i<tablero.obtenerTodasLasUnidades().getNumElementos();i++){
             Unidad obj = tablero.obtenerTodasLasUnidades().getElemento(i);
             if (!(obj.esEnergia())) {
-                this.atacar(objetivo, tablero); //Todos reciben daño a causa de la "contaminacion"
+                this.atacar(obj, tablero); //Todos reciben daño a causa de la "inundacion"
             }
         }
         this.setMaximoUsoHabilidad(this.getMaximoUsoHabilidad()-1);

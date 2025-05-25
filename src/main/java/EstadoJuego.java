@@ -1,3 +1,4 @@
+import Estructuras.ListaBasica;
 
 public class EstadoJuego {
     private int filas;
@@ -8,9 +9,6 @@ public class EstadoJuego {
     private boolean turnoJugador;
     private int turnos;
     private int frecuenciaNuevaUnidad;
-
-    // Constructors, getters y setters
-    public EstadoJuego() {}
 
     public EstadoJuego(Partida partida) {
         Tablero tablero = partida.getTablero();
@@ -29,17 +27,19 @@ public class EstadoJuego {
         }
 
         // Convertir unidades del jugador
-        this.unidadesJugador = partida.getUnidadesJugador().stream()
-                .map(UnidadData::new)
-                .toArray(UnidadData[]::new);
+        ListaBasica<Unidad> unidadesJugadorLista = partida.getUnidadesJugador();
+        this.unidadesJugador = new UnidadData[unidadesJugadorLista.getNumElementos()];
+        for (int i = 0; i < unidadesJugadorLista.getNumElementos(); i++) {
+            this.unidadesJugador[i] = new UnidadData(unidadesJugadorLista.getElemento(i));
+        }
 
         // Convertir unidades IA
-        this.unidadesIA = partida.getUnidadesIA().stream()
-                .map(UnidadData::new)
-                .toArray(UnidadData[]::new);
+        ListaBasica<Unidad> unidadesIALista = partida.getUnidadesIA();
+        this.unidadesIA = new UnidadData[unidadesIALista.getNumElementos()];
+        for (int i = 0; i < unidadesIALista.getNumElementos(); i++) {
+            this.unidadesIA[i] = new UnidadData(unidadesIALista.getElemento(i));
+        }
     }
-
-    // Getters y setters
     public int getFilas() { return filas; }
     public void setFilas(int filas) { this.filas = filas; }
 

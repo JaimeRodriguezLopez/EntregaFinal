@@ -10,8 +10,6 @@ public class UnidadData {
     private int posicionY;
     private boolean esEnergia;
 
-    public UnidadData() {}
-
     public UnidadData(Unidad unidad) {
         this.nombre = unidad.getNombre();
         this.hp = unidad.getHp();

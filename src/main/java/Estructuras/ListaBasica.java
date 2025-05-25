@@ -66,6 +66,13 @@ public class ListaBasica<T> implements Lista<T> {
     public boolean isEmpty() {
         return (getNumElementos()==0);
     }
+    public void clear() { //No lo teniamos y nos hace falta
+        for (int i = 0; i < numElementos; i++) {
+            array[i] = null;
+        }
+        numElementos = 0;
+        pointer = 0;
+    }
  public T getElemento(int i){
         return array[i];
  }
