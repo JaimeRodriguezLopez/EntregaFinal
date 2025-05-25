@@ -76,58 +76,70 @@ public class Partida {
         if (turnoJugador) {
             return;
         }
+        int i = (int) Math.random() * unidadesIA.getNumElementos(); //Asi, en cada turno una unidad aleatoria sera la que se mueva
+        Unidad tmp = unidadesIA.getElemento(i);//Tmp es la unidad que va a usar la ia
+        Unidad objetivo = encontrarObjetivoMasCercano(tmp);
 
-        for (int i = 0; i < unidadesIA.getNumElementos(); i++) {
-            Unidad tmp = unidadesIA.getElemento(i);//Tmp es la unidad que va a usar la ia
-            Unidad objetivo = encontrarObjetivoMasCercano(tmp);
+        if (objetivo != null) {
+            Posicion posUnidad = tmp.getPosicion();
+            Posicion posObjetivo = objetivo.getPosicion();
 
-            if (objetivo != null) {
-                Posicion posUnidad = tmp.getPosicion();
-                Posicion posObjetivo = objetivo.getPosicion();
+            int distancia = Math.abs(posUnidad.getX() - posObjetivo.getX()) + Math.abs(posUnidad.getY() - posObjetivo.getY());
 
-                int distancia = Math.abs(posUnidad.getX() - posObjetivo.getX()) + Math.abs(posUnidad.getY() - posObjetivo.getY());
+            if (distancia <= tmp.getRangoAtaque()) { //Hemos establecido que la prioridad para la ia es que ataque si puede
+                tmp.atacar(objetivo,tablero);
 
-                if (distancia <= tmp.getRangoAtaque()) { //Hemos establecido que la prioridad para la ia es que ataque si puede
-                    tmp.atacar(objetivo,tablero);
+                if (objetivo.estaMuerta()) {
+                    eliminarUnidad(objetivo);
+                }
+            } else {
+                // Mover hacia el objetivo
+                int xActual = posUnidad.getX();
+                int yActual = posUnidad.getY();
+                int xObjetivo = posObjetivo.getX();
+                int yObjetivo = posObjetivo.getY();
+                int direccx = 0;
+                int direccy = 0;
+                if (xActual < xObjetivo) {
+                    direccx = 1; //Para que se mueva a la dcha si el enemigo esta mas a la dcha;
+                }
+                else if (xActual > xObjetivo) {
+                    direccx = -1; //A la izq...
+                }
+                if (yActual < yObjetivo) {
+                    direccy = 1; // para que baje si esta abajo el objetivo;
+                }
+                else if (yActual > yObjetivo) {
+                    direccy = -1;//Sube..
+                }
 
-                    if (objetivo.estaMuerta()) {
-                        eliminarUnidad(objetivo);
+                if (Math.abs(xObjetivo - xActual) > Math.abs(yObjetivo - yActual)) { //Vemos cual de las dos distancias es mayor y nos movemos con respecto a esa
+                    if (!tablero.moverUnidad(tmp, xActual + direccx, yActual)) {
+                        tablero.moverUnidad(tmp, xActual, yActual + direccy); //Intentamos moverlo en horizontal, si no se puede por estar ocupada, que se mueva en vertical.
                     }
                 } else {
-                    // Mover hacia el objetivo
-                    int xActual = posUnidad.getX();
-                    int yActual = posUnidad.getY();
-                    int xObjetivo = posObjetivo.getX();
-                    int yObjetivo = posObjetivo.getY();
-
-                    int dx = Integer.compare(xObjetivo, xActual);
-                    int dy = Integer.compare(yObjetivo, yActual);
-
-                    if (Math.abs(xObjetivo - xActual) > Math.abs(yObjetivo - yActual)) {
-                        if (!tablero.moverUnidad(tmp, xActual + dx, yActual)) {
-                            tablero.moverUnidad(tmp, xActual, yActual + dy);
-                        }
-                    } else {
-                        if (!tablero.moverUnidad(tmp, xActual, yActual + dy)) {
-                            tablero.moverUnidad(tmp, xActual + dx, yActual);
-                        }
+                    if (!tablero.moverUnidad(tmp, xActual, yActual + direccy)) {
+                        tablero.moverUnidad(tmp, xActual + direccx, yActual);
                     }
                 }
             }
         }
-
         turnoJugador = true;
+        turnos ++;
     }
 
     private Unidad encontrarObjetivoMasCercano(Unidad unidad) {
         Posicion posUnidad = unidad.getPosicion();
         Unidad unidadMasCercana = null;
-        int distanciaMinima = Integer.MAX_VALUE;
-
-        // Buscar en el bando contrario
-        ListaBasica<Unidad> objetivos = unidad.esEnergia() ? unidadesIA : unidadesJugador;
-
-        for (int i=0; i< objetivos.getNumElementos(); i++){//(Unidad objetivo : objetivos) {
+        int distanciaMinima = getTablero().getFilas()*getTablero().getColumnas()*10;
+        //Ahora, buscamos cual es el bando contrario
+        ListaBasica<Unidad> objetivos;
+        if (unidad.esEnergia()) {
+            objetivos = unidadesIA;
+        } else {
+            objetivos = unidadesJugador;
+        }
+        for (int i=0; i< objetivos.getNumElementos(); i++){
             Unidad objetivo = objetivos.getElemento(i);
             Posicion posObjetivo = objetivo.getPosicion();
             int distancia = Math.abs(posUnidad.getX() - posObjetivo.getX()) +
@@ -166,7 +178,6 @@ public class Partida {
             } else {
                 nuevaUnidad = new CentralHidroelectrica();
             }
-
             colocarNuevaUnidad(nuevaUnidad, unidadesJugador);
         }
 
@@ -222,7 +233,6 @@ public class Partida {
         return null;
     }
 
-    // Getters
     public Tablero getTablero() {
         return tablero;
     }
