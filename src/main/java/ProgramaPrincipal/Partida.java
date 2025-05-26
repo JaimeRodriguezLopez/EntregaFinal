@@ -232,31 +232,25 @@ public class Partida {
     }
 
     private void colocarNuevaUnidad(Unidad nuevaUnidad, ListaBasica<Unidad> listaUnidades) {
-        ListaBasica<int[]> posicionesLibres = new ListaBasica<>(tablero.getColumnas()*tablero.getFilas());
-        //Aqui, recorremos el tablero entero y metemos la posicion a nuestra lista en caso de que este libre
-        for (int i = 0; i < tablero.getFilas(); i++) {
-            for (int j = 0; j < tablero.getColumnas(); j++) {
-                if (!tablero.getCasilla(i, j).isOcupada()) {
-                    posicionesLibres.add(new int[]{i, j});
+        for (int i=0; i< listaUnidades.getNumElementos();i++){
+            Unidad unidad = listaUnidades.getElemento(i);
+            Posicion pos = unidad.getPosicion();
+            int x = pos.getX();
+            int y = pos.getY();
+
+            int[][] direcciones = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+
+            for (int[] dir : direcciones) {
+                int newX = x + dir[0];
+                int newY = y + dir[1];
+
+                if (tablero.posicionValida(newX, newY) && !tablero.getCasilla(newX, newY).isOcupada()) {
+                    tablero.colocarUnidad(nuevaUnidad, newX, newY);
+                    listaUnidades.add(nuevaUnidad);
+                    logger.info("La nueva unidad: "+ nuevaUnidad.getNombre() + " e en la posicion: ("+ newX + "," + newY + ")"  );
+                    return;
                 }
             }
-        }
-        if (posicionesLibres.isEmpty()) {
-            logger.warn("No hay casillas libres para colocar la unidad: " + nuevaUnidad.getNombre());
-            return;
-        }
-
-        // Hemos planteado que las unidades se coloquen en sitios aleatorios
-        int indiceAleatorio = (int) (Math.random() * posicionesLibres.getNumElementos());
-        int[] posicionElegida = posicionesLibres.getElemento(indiceAleatorio);
-        int x = posicionElegida[0];
-        int y = posicionElegida[1];
-        //Ya solo nos queda colocar la unidad en la posicion que ha surgido
-        if (tablero.colocarUnidad(nuevaUnidad, x, y)) {
-            listaUnidades.add(nuevaUnidad);
-            logger.info("La unidad: " + nuevaUnidad.getNombre() + " se colocó en la posición (" + x + ", " + y + ")");
-        } else {
-            logger.warn("Error al colocar la unidad: " + nuevaUnidad.getNombre());
         }
     }
 
