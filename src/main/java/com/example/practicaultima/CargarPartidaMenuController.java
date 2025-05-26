@@ -1,5 +1,7 @@
 package com.example.practicaultima;
 
+import Excepciones.CasillaOcupadaException;
+import Excepciones.MovimientoFueraDelTableroException;
 import ProgramaPrincipal.CasillaData;
 import ProgramaPrincipal.GestorJSON;
 import ProgramaPrincipal.Partida;
@@ -62,6 +64,10 @@ public class CargarPartidaMenuController {
         } catch (IOException e) {
             e.printStackTrace();
             mostrarError("Error al cargar la partida o la vista de partida.");
+        } catch (MovimientoFueraDelTableroException e) {
+            throw new RuntimeException(e);
+        } catch (CasillaOcupadaException e) {
+            throw new RuntimeException(e);
         }
     }
     private void mostrarError(String mensaje) {//Enseñar errores

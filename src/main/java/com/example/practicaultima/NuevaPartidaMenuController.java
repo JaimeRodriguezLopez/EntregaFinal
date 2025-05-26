@@ -1,5 +1,7 @@
 package com.example.practicaultima;
 
+import Excepciones.CasillaOcupadaException;
+import Excepciones.MovimientoFueraDelTableroException;
 import ProgramaPrincipal.Casilla;
 import ProgramaPrincipal.CasillaData;
 import ProgramaPrincipal.Partida;
@@ -95,6 +97,10 @@ public class NuevaPartidaMenuController {
         } catch (IOException e) {
             e.printStackTrace();
             mostrarError("Error al cargar el tablero o la vista de partida.");
+        } catch (MovimientoFueraDelTableroException e) {
+            throw new RuntimeException(e);
+        } catch (CasillaOcupadaException e) {
+            throw new RuntimeException(e);
         }
     }
 

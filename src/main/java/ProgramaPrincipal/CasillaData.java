@@ -28,5 +28,4 @@ public class CasillaData {
     public void setOcupada(boolean ocupada) { this.ocupada = ocupada; }
 
     public UnidadData getUnidadData() { return unidadData; }
-    public void setUnidadData(UnidadData unidadData) { this.unidadData = unidadData; }
 }

@@ -1,6 +1,8 @@
 package ProgramaPrincipal;
 
 import Estructuras.ListaBasica;
+import Excepciones.CasillaOcupadaException;
+import Excepciones.MovimientoFueraDelTableroException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -23,7 +25,7 @@ public class Partida {
         this.frecuenciaNuevaUnidad = frecuenciaNuevaUnidad;
     }
 
-    public void inicializar() {
+    public void inicializar() throws MovimientoFueraDelTableroException, CasillaOcupadaException {
         logger.info("Iniciando nueva partida - Tablero: " + tablero.getFilas() + "x" + tablero.getColumnas());
         //Creamos las unidades para el humano
         CentralNuclear centralNuclear = new CentralNuclear();
@@ -49,7 +51,7 @@ public class Partida {
         logger.info("Partida inicializada correctamente");
     }
 
-    public void turnoJugador(Unidad unidad, Accion accion, int xDestino, int yDestino) {
+    public void turnoJugador(Unidad unidad, Accion accion, int xDestino, int yDestino) throws MovimientoFueraDelTableroException, CasillaOcupadaException {
         logger.info("Inicia el turno del jugador.");
         if (!turnoJugador || !unidadesJugador.contieneElemento(unidad)) {
             logger.warn("No puedes hacer eso!, no es tu turno o la unidad no es tuya");
@@ -100,7 +102,7 @@ public class Partida {
         }
     }
 
-    public void turnoIA() {
+    public void turnoIA() throws MovimientoFueraDelTableroException, CasillaOcupadaException {
         if (turnoJugador) {
             return;
         }
@@ -202,7 +204,7 @@ public class Partida {
         }
     }
 
-    private void generarNuevaUnidad() {
+    private void generarNuevaUnidad() throws MovimientoFueraDelTableroException, CasillaOcupadaException {
 
         if (!unidadesJugador.isEmpty()) {
             Unidad nuevaUnidad;
@@ -231,7 +233,7 @@ public class Partida {
         }
     }
 
-    private void colocarNuevaUnidad(Unidad nuevaUnidad, ListaBasica<Unidad> listaUnidades) {
+    private void colocarNuevaUnidad(Unidad nuevaUnidad, ListaBasica<Unidad> listaUnidades) throws MovimientoFueraDelTableroException, CasillaOcupadaException {
         for (int i=0; i< listaUnidades.getNumElementos();i++){
             Unidad unidad = listaUnidades.getElemento(i);
             Posicion pos = unidad.getPosicion();
@@ -290,7 +292,7 @@ public class Partida {
         this.turnoJugador = turnoJugador;
     }
 
-    public void incrementarTurno() {
+    public void incrementarTurno() throws MovimientoFueraDelTableroException, CasillaOcupadaException {
         turnos++;
         if (turnos % frecuenciaNuevaUnidad == 0) {
             generarNuevaUnidad();

@@ -4,12 +4,9 @@ public abstract class Unidad {
     private int maximoUsoHabilidad;
     private String nombre;
     private int hp;
-    private int hpReal;
     private int ataque;
     private int defensa;
-    private int defensaReal;
     private int rangoMovimiento;
-    private int MovimientosRestantes;
     private int rangoAtaque;
     private Posicion posicion;
     private boolean ataquedisponible;
@@ -19,12 +16,9 @@ public abstract class Unidad {
     public Unidad(String nombre, int hp, int ataque, int defensa, int rangoMovimiento, int rangoAtaque, int maximoUsoHabilidad) {
         this.nombre = nombre;
         this.hp = hp;
-        this.hpReal = hp;
         this.ataque = ataque;
         this.defensa = defensa;
-        this.defensaReal = defensa;
         this.rangoMovimiento = rangoMovimiento;
-        this.MovimientosRestantes = rangoMovimiento;
         this.rangoAtaque = rangoAtaque;
         this.maximoUsoHabilidad = maximoUsoHabilidad;
         this.ataquedisponible = true;
@@ -93,30 +87,6 @@ public abstract class Unidad {
 
     public void setPosicion(Posicion posicion) {
         this.posicion = posicion;
-    }
-
-    public int getDefensaReal() {
-        return defensaReal;
-    }
-
-    public void setDefensaReal(int defensaReal) {
-        this.defensaReal = defensaReal;
-    }
-
-    public int getMovimientosRestantes() {
-        return MovimientosRestantes;
-    }
-
-    public void setMovimientosRestantes(int rangoMovimientoReal) {
-        this.MovimientosRestantes = rangoMovimientoReal;
-    }
-
-    public int getHpReal() {
-        return hpReal;
-    }
-
-    public void setHpReal(int hpReal) {
-        this.hpReal = hpReal;
     }
 
     public boolean Ataquedisponible() {

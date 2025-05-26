@@ -1,8 +1,13 @@
 package ProgramaPrincipal;
 
 import Estructuras.ListaBasica;
+import Excepciones.CasillaOcupadaException;
+import Excepciones.MovimientoFueraDelTableroException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Tablero {
+    private static final Logger logger = LogManager.getLogger(Tablero.class);
     private int filas;
     private int columnas;
     private Casilla[][] casillas;
@@ -53,13 +58,28 @@ public class Tablero {
         return x >= 0 && x < filas && y >= 0 && y < columnas;
     }
 
-    public boolean colocarUnidad(Unidad unidad, int x, int y) {
-        if (posicionValida(x, y) && !casillas[x][y].isOcupada()) {
+    public boolean colocarUnidad(Unidad unidad, int x, int y) throws MovimientoFueraDelTableroException, CasillaOcupadaException {
+        try {
+            if (!posicionValida(x, y)) { //Vemos si la casilla esta dentro del tablero
+                throw new MovimientoFueraDelTableroException(x, y, filas, columnas);
+            }
+
+            if (casillas[x][y].isOcupada()) {
+                String ocupante = casillas[x][y].getUnidad().getNombre();
+                throw new CasillaOcupadaException(x, y, ocupante);
+            }
             casillas[x][y].setUnidad(unidad);
             unidad.setPosicion(new Posicion(x, y));
+            logger.info("Unidad " + unidad.getNombre() + " colocada en (" + x + "," + y + ")");
             return true;
+
+        } catch (MovimientoFueraDelTableroException | CasillaOcupadaException e) {
+            logger.warn("Error al colocar unidad: " + e.getMessage());
+            return false;
+        } catch (Exception e) {
+            logger.error("Error inesperado al colocar unidad: " + e.getMessage());
+            return false;
         }
-        return false;
     }
     public boolean moverUnidad(Unidad unidad, int xDestino, int yDestino) {
         Posicion posActual = unidad.getPosicion();

@@ -1,6 +1,8 @@
 package com.example.practicaultima;
 
 import Estructuras.ListaBasica;
+import Excepciones.CasillaOcupadaException;
+import Excepciones.MovimientoFueraDelTableroException;
 import ProgramaPrincipal.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -110,7 +112,15 @@ public class VistaPartidaController {
                 }
                 int x = i, y = j;
                 btn.setPrefSize(40, 40);
-                btn.setOnAction(e -> onCasillaClick(x, y));
+                btn.setOnAction(e -> {
+                    try {
+                        onCasillaClick(x, y);
+                    } catch (MovimientoFueraDelTableroException ex) {
+                        throw new RuntimeException(ex);
+                    } catch (CasillaOcupadaException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                });
                 gridTablero.add(btn, j, i);
             }
         }
@@ -124,7 +134,7 @@ public class VistaPartidaController {
         }
     }
 
-    private void onCasillaClick(int x, int y) {
+    private void onCasillaClick(int x, int y) throws MovimientoFueraDelTableroException, CasillaOcupadaException {
         Casilla casilla = partida.getTablero().getCasilla(x, y);
 
         // Si estamos en modo mover
@@ -201,7 +211,7 @@ public class VistaPartidaController {
     }
 
     @FXML
-    private void onTerminarTurnoClick() {//pasar turno
+    private void onTerminarTurnoClick() throws MovimientoFueraDelTableroException, CasillaOcupadaException {//pasar turno
         if (!partida.isTurnoJugador()) return;
         casillasMovimiento.clear();
         casillasAtaque.clear();
@@ -266,7 +276,7 @@ public class VistaPartidaController {
         }
     }
     @FXML
-    private void onHabilidadClick() {//Aun no funciona bien
+    private void onHabilidadClick() throws MovimientoFueraDelTableroException, CasillaOcupadaException {//Aun no funciona bien
         if (unidadSeleccionada != null && partida.isTurnoJugador()) {
             // Busca un objetivo válido (por ejemplo, una unidad enemiga en rango)
             Unidad objetivo = buscarObjetivoParaHabilidad(unidadSeleccionada);

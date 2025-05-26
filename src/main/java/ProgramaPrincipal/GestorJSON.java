@@ -1,5 +1,7 @@
 package ProgramaPrincipal;
 
+import Excepciones.CasillaOcupadaException;
+import Excepciones.MovimientoFueraDelTableroException;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -22,7 +24,7 @@ public class GestorJSON {
         }
     }
 
-    public static Partida cargarPartida(String nombreArchivo) throws IOException {
+    public static Partida cargarPartida(String nombreArchivo) throws IOException, MovimientoFueraDelTableroException, CasillaOcupadaException {
         EstadoJuego estado = null;
         try (FileReader reader = new FileReader(nombreArchivo + ".json")) {
             estado = gson.fromJson(reader, EstadoJuego.class);
@@ -33,7 +35,7 @@ public class GestorJSON {
         }
         return reconstruirPartida(estado);
     }
-    private static Partida reconstruirPartida(EstadoJuego estado) {
+    private static Partida reconstruirPartida(EstadoJuego estado) throws MovimientoFueraDelTableroException, CasillaOcupadaException {
         Casilla[][] casillareconstruida = new Casilla[estado.getFilas()][estado.getColumnas()];
         Partida partida = new Partida(estado.getFilas(), estado.getColumnas(), estado.getFrecuenciaNuevaUnidad());
         //Primero reconstruimos el tablero (Ojo, las unidades aun no las metemos, solo las casillas)
