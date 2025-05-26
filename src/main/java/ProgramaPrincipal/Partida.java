@@ -1,16 +1,18 @@
 package ProgramaPrincipal;
 
 import Estructuras.ListaBasica;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 
 public class Partida {
+    private static final Logger logger = LogManager.getLogger(Partida.class);
     private Tablero tablero;
     private ListaBasica<Unidad> unidadesJugador;
     private ListaBasica<Unidad> unidadesIA;
     private boolean turnoJugador;
     private int turnos;
     private int frecuenciaNuevaUnidad;
-    private CreadorAcciones creadorAcciones;
 
     public Partida(int filas, int columnas, int frecuenciaNuevaUnidad) {
         this.tablero = new Tablero(filas, columnas);
@@ -19,11 +21,11 @@ public class Partida {
         this.turnoJugador = true;
         this.turnos = 0;
         this.frecuenciaNuevaUnidad = frecuenciaNuevaUnidad;
-        this.creadorAcciones = new CreadorAcciones();
     }
 
     public void inicializar() {
-        //Creamos las unidades para el humano.
+        logger.info("Iniciando nueva partida - Tablero: " + tablero.getFilas() + "x" + tablero.getColumnas());
+        //Creamos las unidades para el humano
         CentralNuclear centralNuclear = new CentralNuclear();
         CentralEolica centralEolica = new CentralEolica();
 
@@ -32,6 +34,7 @@ public class Partida {
 
         unidadesJugador.add(centralNuclear);
         unidadesJugador.add(centralEolica);
+        logger.info("Unidades del jugador creadas: Central Nuclear en (0,0), Central Eólica en (0," + (tablero.getColumnas()-1) + ")");
 
         //Las de la ia
         Malware malware = new Malware();
@@ -42,29 +45,56 @@ public class Partida {
 
         unidadesIA.add(malware);
         unidadesIA.add(ransomware);
+        logger.info("Unidades IA creadas: Malware y Ransomware posicionados");
+        logger.info("Partida inicializada correctamente");
     }
 
     public void turnoJugador(Unidad unidad, Accion accion, int xDestino, int yDestino) {
+        logger.info("Inicia el turno del jugador.");
         if (!turnoJugador || !unidadesJugador.contieneElemento(unidad)) {
+            logger.warn("No puedes hacer eso!, no es tu turno o la unidad no es tuya");
             return;
         }
+        logger.info("Turno jugador - Unidad: " + unidad.getNombre() + ", Acción: " + accion.getNombre() + ", Destino: (" + xDestino + "," + yDestino + ")");
         ejecutarAccion(unidad, accion, xDestino, yDestino);
+        incrementarTurno();
 
     }
 
     private void ejecutarAccion(Unidad unidad, Accion accion, int xDestino, int yDestino) {
         if (accion.esMover()) {
-            tablero.moverUnidad(unidad, xDestino, yDestino);
+            logger.debug("Ejecutando movimiento de " + unidad.getNombre() + " hacia (" + xDestino + "," + yDestino + ")");
+            boolean Sepudo = tablero.moverUnidad(unidad, xDestino, yDestino);
+            if(Sepudo){
+                logger.info("La unidad: "+ unidad.getNombre() + " se ha movido hacia (" + xDestino + "," + yDestino + ")");
+            }
+            else{
+                logger.warn("No se ha podido mover la unidad: "+ unidad.getNombre() + " hacia (" + xDestino + "," + yDestino + ")");
+            }
         } else if (accion.esAtacar()) {
             Casilla casillaDestino = tablero.getCasilla(xDestino, yDestino);
             if (casillaDestino != null && casillaDestino.isOcupada()) {
                 Unidad objetivo = casillaDestino.getUnidad();
                 //No queremos que haya fuego amigo, por tanto, verificamos que sea enemigo
                 if (objetivo.esEnergia() != unidad.esEnergia()) {
-                    unidad.atacar(objetivo,tablero);
-                    if (objetivo.estaMuerta()) {
-                        eliminarUnidad(objetivo);
+                    logger.info("Atacando...: " + unidad.getNombre() + " ataca a " + objetivo.getNombre());
+                    Posicion posUnidad = unidad.getPosicion();
+                    int distancia = Math.abs(posUnidad.getX() - xDestino) +
+                            Math.abs(posUnidad.getY() - yDestino);
+                    if (distancia <= unidad.getRangoAtaque()) {
+                        int dano = unidad.atacar(objetivo,tablero);
+                        logger.info("Se ha atacado correctamente: " + objetivo.getNombre() + ", causando: "+ dano + " de daño.");
+                        if (objetivo.estaMuerta()) {
+                            logger.info("La unidad: "+ objetivo.getNombre() + " ha muerto a causa del ataque");
+                            eliminarUnidad(objetivo);
+                        }
                     }
+                    else{
+                        logger.warn("Ojo!, no puedes atacar a ese objetivo porque está fuera del rango de ataque");
+                    }
+                }
+                else{
+                    logger.warn("Se ha intentado atacar a una unidad amiga, lo hemos evitado correctamente pero pierdes tu turno");
                 }
             }
         }
@@ -74,6 +104,7 @@ public class Partida {
         if (turnoJugador) {
             return;
         }
+        logger.info("Iniciando el turno de nuestra IA");
         int i = (int) (Math.random() * unidadesIA.getNumElementos()); //Asi, en cada turno una unidad aleatoria sera la que se mueva
         Unidad tmp = unidadesIA.getElemento(i);//Tmp es la unidad que va a usar la ia
         Unidad objetivo = encontrarObjetivoMasCercano(tmp);
@@ -85,9 +116,11 @@ public class Partida {
             int distancia = Math.abs(posUnidad.getX() - posObjetivo.getX()) + Math.abs(posUnidad.getY() - posObjetivo.getY());
 
             if (distancia <= tmp.getRangoAtaque()) { //Hemos establecido que la prioridad para la ia es que ataque si puede
-                tmp.atacar(objetivo,tablero);
+                int dano = tmp.atacar(objetivo,tablero);
+                logger.info("La IA ha decidido que: "+tmp.getNombre()+ " ataque a : " + objetivo.getNombre() + "y le ha causado: "+ dano + " de daño.");
 
                 if (objetivo.estaMuerta()) {
+                    logger.warn("La IA ha matado a : " + objetivo.getNombre());
                     eliminarUnidad(objetivo);
                 }
             } else {
@@ -120,10 +153,11 @@ public class Partida {
                         tablero.moverUnidad(tmp, xActual + direccx, yActual);
                     }
                 }
+                logger.info("La IA ha decidido que: "+tmp.getNombre() + " se mueva hacia: (" + tmp.getPosicion().getX() + ", " + tmp.getPosicion().getY() + ")");
             }
         }
         turnoJugador = true;
-        turnos ++;
+        incrementarTurno();
     }
 
     private Unidad encontrarObjetivoMasCercano(Unidad unidad) {
@@ -154,12 +188,17 @@ public class Partida {
 
     private void eliminarUnidad(Unidad unidad) {
         Posicion pos = unidad.getPosicion();
+        logger.info("Eliminando la unidad del juego: " + unidad.getNombre() + " en la posicion (" + pos.getX() + "," + pos.getY() + ")");
         tablero.getCasilla(pos.getX(), pos.getY()).setUnidad(null);
-
         if (unidad.esEnergia()) {
+            logger.info("Unidad del jugador eliminada. Unidades restantes: " + unidadesJugador.getNumElementos());
             unidadesJugador.delete(unidad);
         } else {
+            logger.info("Unidad de la ia eliminada. Unidades restantes: " + unidadesIA.getNumElementos());
             unidadesIA.delete(unidad);
+        }
+        if (this.juegoTerminado()){
+            logger.warn("Juego terminado, el ganador es: " + obtenerGanador() + "!!!");
         }
     }
 
@@ -168,7 +207,6 @@ public class Partida {
         if (!unidadesJugador.isEmpty()) {
             Unidad nuevaUnidad;
             int tipo = (int) (Math.random() * 3);
-
             if (tipo == 0) {
                 nuevaUnidad = new CentralNuclear();
             } else if (tipo == 1) {
@@ -182,7 +220,6 @@ public class Partida {
         if (!unidadesIA.isEmpty()) {
             Unidad nuevaUnidad;
             int tipo = (int) (Math.random() * 3);
-
             if (tipo == 0) {
                 nuevaUnidad = new Malware();
             } else if (tipo == 1) {
@@ -190,34 +227,40 @@ public class Partida {
             } else {
                 nuevaUnidad = new Phishing();
             }
-
             colocarNuevaUnidad(nuevaUnidad, unidadesIA);
         }
     }
 
-    public void colocarNuevaUnidad(Unidad nuevaUnidad, ListaBasica<Unidad> listaUnidades) {
-        for (int i = 0; i < listaUnidades.getNumElementos(); i++) {
-            Unidad unidad = listaUnidades.getElemento(i);
-            Posicion pos = unidad.getPosicion();
-            int x = pos.getX();
-            int y = pos.getY();
-
-            int[][] direcciones = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
-
-            for (int[] dir : direcciones) {
-                int newX = x + dir[0];
-                int newY = y + dir[1];
-
-                if (tablero.posicionValida(newX, newY) && !tablero.getCasilla(newX, newY).isOcupada()) {
-                    tablero.colocarUnidad(nuevaUnidad, newX, newY);
-                    listaUnidades.add(nuevaUnidad);
-                    return;
+    private void colocarNuevaUnidad(Unidad nuevaUnidad, ListaBasica<Unidad> listaUnidades) {
+        ListaBasica<int[]> posicionesLibres = new ListaBasica<>(tablero.getColumnas()*tablero.getFilas());
+        //Aqui, recorremos el tablero entero y metemos la posicion a nuestra lista en caso de que este libre
+        for (int i = 0; i < tablero.getFilas(); i++) {
+            for (int j = 0; j < tablero.getColumnas(); j++) {
+                if (!tablero.getCasilla(i, j).isOcupada()) {
+                    posicionesLibres.add(new int[]{i, j});
                 }
             }
         }
+        if (posicionesLibres.isEmpty()) {
+            logger.warn("No hay casillas libres para colocar la unidad: " + nuevaUnidad.getNombre());
+            return;
+        }
+
+        // Hemos planteado que las unidades se coloquen en sitios aleatorios
+        int indiceAleatorio = (int) (Math.random() * posicionesLibres.getNumElementos());
+        int[] posicionElegida = posicionesLibres.getElemento(indiceAleatorio);
+        int x = posicionElegida[0];
+        int y = posicionElegida[1];
+        //Ya solo nos queda colocar la unidad en la posicion que ha surgido
+        if (tablero.colocarUnidad(nuevaUnidad, x, y)) {
+            listaUnidades.add(nuevaUnidad);
+            logger.info("La unidad: " + nuevaUnidad.getNombre() + " se colocó en la posición (" + x + ", " + y + ")");
+        } else {
+            logger.warn("Error al colocar la unidad: " + nuevaUnidad.getNombre());
+        }
     }
 
-    public boolean juegoTerminado() {
+    public boolean juegoTerminado(){
         return unidadesJugador.isEmpty() || unidadesIA.isEmpty();
     }
 
