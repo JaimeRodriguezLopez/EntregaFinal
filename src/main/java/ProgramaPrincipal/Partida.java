@@ -23,7 +23,7 @@ public class Partida {
     }
 
     public void inicializar() {
-        //Creamos las unidades para el humano
+        //Creamos las unidades para el humano.
         CentralNuclear centralNuclear = new CentralNuclear();
         CentralEolica centralEolica = new CentralEolica();
 
