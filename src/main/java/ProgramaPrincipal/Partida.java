@@ -195,9 +195,8 @@ public class Partida {
         }
     }
 
-    private void colocarNuevaUnidad(Unidad nuevaUnidad, ListaBasica<Unidad> listaUnidades) {
-        //Aqui tengo que trabajar
-        for (int i=0; i< listaUnidades.getNumElementos();i++){
+    public void colocarNuevaUnidad(Unidad nuevaUnidad, ListaBasica<Unidad> listaUnidades) {
+        for (int i = 0; i < listaUnidades.getNumElementos(); i++) {
             Unidad unidad = listaUnidades.getElemento(i);
             Posicion pos = unidad.getPosicion();
             int x = pos.getX();
