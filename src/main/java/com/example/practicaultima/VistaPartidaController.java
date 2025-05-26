@@ -3,11 +3,16 @@ package com.example.practicaultima;
 import Estructuras.ListaBasica;
 import ProgramaPrincipal.*;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
 
 public class VistaPartidaController {
@@ -21,6 +26,7 @@ public class VistaPartidaController {
     @FXML private Label labelRangoMov;
     @FXML private Label labelRangoAtq;
     @FXML public Button TerminarButton;
+    @FXML public Button VolverDesdePartida;
     private ListaBasica<Posicion> casillasMovimiento = new ListaBasica<>(100);
     private ListaBasica<Posicion> casillasAtaque = new ListaBasica<>(100);
 
@@ -33,7 +39,18 @@ public class VistaPartidaController {
         this.partida = partida;
         actualizarVista();
     }
-
+    @FXML
+    protected void VolverMenuPrincipalButtonClick(){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("MenuPrincipal.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) VolverDesdePartida.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     private void actualizarVista() {//Cambia la vista
         gridTablero.getChildren().clear();
         Tablero tablero = partida.getTablero();
@@ -329,7 +346,7 @@ public class VistaPartidaController {
     }
 
 
-    private ListaBasica<Posicion> calcularCasillasAtaque(Unidad unidad) {//Buscar qeu casillas en su rango contienen tropas enemigas
+    private ListaBasica<Posicion> calcularCasillasAtaque(Unidad unidad) {//Buscar que casillas en su rango contienen tropas enemigas
         ListaBasica<Posicion> resultado = new ListaBasica<>(1000);
         int rango = unidad.getRangoAtaque();
         Posicion pos = unidad.getPosicion();
