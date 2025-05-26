@@ -7,7 +7,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
-public class Partida {
+public class  Partida {
     private static final Logger logger = LogManager.getLogger(Partida.class);
     private Tablero tablero;
     private ListaBasica<Unidad> unidadesJugador;

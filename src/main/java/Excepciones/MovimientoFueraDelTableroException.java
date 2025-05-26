@@ -1,6 +1,6 @@
 package Excepciones;
 
-public class MovimientoFueraDelTableroException extends Exception {
+public class  MovimientoFueraDelTableroException extends Exception {
     private int x, y;
     private int maxFilas, maxColumnas;
 

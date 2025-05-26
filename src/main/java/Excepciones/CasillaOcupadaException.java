@@ -1,6 +1,6 @@
 package Excepciones;
 
-public class CasillaOcupadaException extends Exception {
+public class  CasillaOcupadaException extends Exception {
     private int x, y;
     private String unidadOcupante;
 

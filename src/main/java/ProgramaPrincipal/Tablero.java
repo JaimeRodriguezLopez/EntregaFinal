@@ -6,7 +6,7 @@ import Excepciones.MovimientoFueraDelTableroException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class Tablero {
+public class  Tablero {
     private static final Logger logger = LogManager.getLogger(Tablero.class);
     private int filas;
     private int columnas;
