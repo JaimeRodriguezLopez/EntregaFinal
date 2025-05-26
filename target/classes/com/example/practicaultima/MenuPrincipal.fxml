@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practicaultima.MenuPrincipalController">
+    <children>
+        <Circle fill="RED" layoutX="300.0" layoutY="188.0" radius="156.0" stroke="BLACK" strokeType="INSIDE" />
+        <Label layoutX="251.0" layoutY="69.0" text="guerra Cibernetica" />
+        <Button fx:id="NuevaPartidaButton" layoutX="255.0" layoutY="98.0" mnemonicParsing="false" onAction="#NuevaPartidaButtonClick" text="Nueva Partida" />
+        <Button fx:id="TablerosButton" layoutX="271.0" layoutY="188.0" mnemonicParsing="false" onAction="#TablerosButtonClick" text="Tableros" />
+        <Button fx:id="CargarPartidaButton" layoutX="255.0" layoutY="143.0" mnemonicParsing="false" onAction="#CargarPartidaButtonClick" text="Cargar Partida" />
+        <Button fx:id="LogsButton" layoutX="280.0" layoutY="234.0" mnemonicParsing="false" onAction="#LogsButtonClick" text="Logs" />
+        <Button fx:id="SalirButton" layoutX="255.0" layoutY="281.0" mnemonicParsing="false" onAction="#SalirButtonClick" text="Salir de Juego" />
+    </children>
+</AnchorPane>

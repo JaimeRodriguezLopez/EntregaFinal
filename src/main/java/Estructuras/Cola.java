@@ -43,6 +43,7 @@ public class Cola<T> implements Lista<T> {
         return true;
     }
 
+
     @Override
     public boolean delete(T elemento) {
         return true;

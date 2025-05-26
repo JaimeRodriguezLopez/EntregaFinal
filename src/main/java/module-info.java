@@ -9,4 +9,5 @@ module com.example.practicaultima {
 
     opens com.example.practicaultima to javafx.fxml;
     exports com.example.practicaultima;
+    opens ProgramaPrincipal to com.google.gson;
 }

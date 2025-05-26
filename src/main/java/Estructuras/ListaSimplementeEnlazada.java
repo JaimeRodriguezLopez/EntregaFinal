@@ -99,12 +99,13 @@ public class ListaSimplementeEnlazada<T> implements Lista<T> {
         }
 
         @Override
-        public void delete() {
+        public boolean delete() {
             if (previo == null) {
                 throw new IllegalStateException("Debe llamar a next() antes de eliminar.");
             }
             ListaSimplementeEnlazada.this.delete(previo.dato);
             previo = null;
+            return false;
         }
         public Object insert(T elemento) {
             Elemento<T> nuevo = new Elemento<>(elemento);

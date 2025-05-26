@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practicaultima.NuevaPartidaMenuController">
+   <children>
+      <Label layoutX="246.0" layoutY="30.0" text="Nueva Partida Menu" />
+      <Button fx:id="NuevoTablero" layoutX="253.0" layoutY="221.0" mnemonicParsing="false" onAction="#NuevoTableroButtonClick" text="Nuevo Tablero" />
+      <Button fx:id="Volver" layoutX="232.0" layoutY="246.0" mnemonicParsing="false" onAction="#VolverButtonClick" text=" Volver Menu Principal" />
+      <Button fx:id="NuevaPartidaTablero" layoutX="217.0" layoutY="111.0" mnemonicParsing="false" onAction="#onNuevaPartidaTableroClick" text="Nueva partida con el Tablero" />
+      <Label layoutX="217.0" layoutY="69.0" text="Frecuencia de Nuevas Unidades" />
+      <TextField fx:id="FrecuenciaNuevasUnidades" layoutX="386.0" layoutY="65.0" prefHeight="25.0" prefWidth="31.0" promptText="5" />
+   </children>
+</AnchorPane>

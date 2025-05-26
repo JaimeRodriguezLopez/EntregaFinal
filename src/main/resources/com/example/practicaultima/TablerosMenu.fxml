@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practicaultima.EditorTableroController">
+   <children>
+      <Label layoutX="250.0" layoutY="32.0" prefHeight="21.0" prefWidth="100.0" text="Menu de Tableros" />
+      <Label layoutX="157.0" layoutY="62.0" text="Elegir tablero para editarlo o eliminarlo o crear nuevo." />
+      <ComboBox layoutX="225.0" layoutY="88.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

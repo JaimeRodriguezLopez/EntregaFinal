@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practicaultima.VistaPartidaController">
+
+    <!-- Barra superior con información de turno y botones globales -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-padding: 10;">
+            <Label fx:id="labelTurno" text="Turno: " />
+            <Label fx:id="labelInfo" text="Selecciona una unidad para empezar" />
+            <Button onAction="#onGuardarPartidaClick" text="Guardar partida" />
+            <Button fx:id="TerminarButton" onAction="#onTerminarTurnoClick" text="Terminar turno" />
+        </HBox>
+    </top>
+
+    <!-- Tablero de juego en el centro -->
+    <center>
+        <GridPane fx:id="gridTablero" hgap="2" style="-fx-padding: 20;" vgap="2" />
+    </center>
+
+    <!-- Panel lateral derecho con acciones de la unidad seleccionada -->
+    <right>
+        <VBox alignment="TOP_CENTER" spacing="10" style="-fx-padding: 20;">
+            <Label text="Unidad seleccionada:" />
+            <Label fx:id="labelUnidadSeleccionada" text="Ninguna" />
+            <Label fx:id="labelHp" text="HP: " />
+            <Label fx:id="labelAtaque" text="Ataque: " />
+            <Label fx:id="labelDefensa" text="Defensa: " />
+            <Label fx:id="labelRangoMov" text="Rango mov.: " />
+            <Label fx:id="labelRangoAtq" text="Rango atq.: " />
+            <HBox spacing="10">
+                <Button onAction="#onMoverClick" text="Mover" />
+                <Button onAction="#onAtacarClick" text="Atacar" />
+                <Button onAction="#onHabilidadClick" text="Habilidad" />
+            </HBox>
+        </VBox>
+    </right>
+</BorderPane>

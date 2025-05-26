@@ -82,12 +82,13 @@ public class ListaDoblementeEnlazada<T> implements Lista<T> {
         }
 
         @Override
-        public void delete() {
+        public boolean delete() {
             if (previo == null) {
                 throw new IllegalStateException("Debe llamar a next() antes de eliminar.");
             }
             ListaDoblementeEnlazada.this.delete(previo.dato);
             previo = null;
+            return false;
         }
         @Override
         public Object insert(T elemento) {

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.practicaultima.EditorTableroController">
+    <children>
+        <GridPane fx:id="gridPane" layoutX="20" layoutY="20" hgap="5" vgap="5"
+                  AnchorPane.leftAnchor="20" AnchorPane.topAnchor="20"/>
+        <Button fx:id="GuardarButton" text="Guardar"
+                layoutX="20" layoutY="400"
+                onAction="#onGuardarButtonClick"/>
+        <VBox layoutX="400" layoutY="20">
+            <Label text="Leyenda:"/>
+            <Label text="N = Normal"/>
+            <Label text="M = Montaña"/>
+        </VBox>
+    </children>
+</AnchorPane>

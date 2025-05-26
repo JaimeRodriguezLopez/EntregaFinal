@@ -4,6 +4,7 @@ public class ListaBasica<T> implements Lista<T> {
     private T[] array;
     private int pointer = 0;
     private int numElementos;
+
     public ListaBasica(int capacidad){
         array = (T[]) new Object[capacidad];
         numElementos = 0;
@@ -62,16 +63,26 @@ public class ListaBasica<T> implements Lista<T> {
     public int getNumElementos(){
         return numElementos;
     }
-
-    public boolean isEmpty() {
-        return (getNumElementos()==0);
-    }
-    public void clear() { //No lo teniamos y nos hace falta
+    public void clear() {
         for (int i = 0; i < numElementos; i++) {
             array[i] = null;
         }
         numElementos = 0;
-        pointer = 0;
+    }
+    public T remove(int index) {
+        if (index < 0 || index >= numElementos) {
+            throw new IndexOutOfBoundsException();
+        }
+        T removed = array[index];
+        for (int i = index; i < numElementos - 1; i++) {
+            array[i] = array[i + 1];
+        }
+        array[numElementos - 1] = null;
+        numElementos--;
+        return removed;
+    }
+    public boolean isEmpty() {
+        return (getNumElementos()==0);
     }
  public T getElemento(int i){
         return array[i];
@@ -96,21 +107,22 @@ public class ListaBasica<T> implements Lista<T> {
                     return array[pointer-1];
                 }
             }
-
             @Override
-            public void delete() {
+            public boolean delete() {
                 if (!puedeEliminar) {
                     throw new IllegalStateException("No se puede eliminar sin llamar a next()");
-                }
+                } else {
+                    for(int i = ListaBasica.this.pointer - 1; i < ListaBasica.this.numElementos - 1; ++i) {
+                        ListaBasica.this.array[i] = ListaBasica.this.array[i + 1];
+                    }
 
-                for (int i = pointer - 1; i < numElementos - 1; i++) {
-                    array[i] = array[i + 1];
+                    ListaBasica.this.array[ListaBasica.this.numElementos - 1] = null;
+                    --ListaBasica.this.numElementos;
+                    --ListaBasica.this.pointer;
                 }
-                array[numElementos - 1] = null;
-                numElementos--;
-                pointer--;
-
+                return false;
             }
+
 
             @Override
             public Object insert(T elemento) {
