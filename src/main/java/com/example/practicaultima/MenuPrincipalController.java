@@ -40,7 +40,7 @@ public class MenuPrincipalController {
     @FXML
     protected void CargarPartidaButtonClick(){
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(".fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("CargarPartidaMenu.fxml"));
             Parent root = loader.load();
             Stage stage = (Stage) CargarPartidaButton.getScene().getWindow();
             stage.setScene(new Scene(root));
