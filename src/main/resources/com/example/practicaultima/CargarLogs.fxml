@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.practicaultima.CargarLogsController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practicaultima.CargarLogsController">
+   <children>
+      <Button fx:id="VolverMenuInicial" layoutX="234.0" layoutY="217.0" mnemonicParsing="false" onAction="#onVolverMenuInicialClick" text="Volver Menu Principal" />
+      <Button fx:id="VerLogs" layoutX="274.0" layoutY="149.0" mnemonicParsing="false" onAction="#onLogsButtonClick" text="VerLogs" />
+      <Label layoutX="266.0" layoutY="103.0" text="Menu ver logs" />
+   </children>
 </AnchorPane>
