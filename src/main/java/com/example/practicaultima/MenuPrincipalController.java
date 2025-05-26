@@ -64,7 +64,7 @@ public class MenuPrincipalController {
     @FXML
     protected void LogsButtonClick(){
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(".fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("CargarLogs.fxml"));
             Parent root = loader.load();
             Stage stage = (Stage) LogsButton.getScene().getWindow();
             stage.setScene(new Scene(root));

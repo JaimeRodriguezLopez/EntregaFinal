@@ -2,10 +2,15 @@ package com.example.practicaultima;
 
 import com.google.gson.Gson;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import ProgramaPrincipal.*;
+import javafx.stage.Stage;
+
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -101,6 +106,15 @@ public class EditorTableroController {
             alert.setHeaderText(null);
             alert.setContentText("Error al guardar el tablero.");
             alert.showAndWait();
+        }
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("NuevaPartidaMenu.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) GuardarButton.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

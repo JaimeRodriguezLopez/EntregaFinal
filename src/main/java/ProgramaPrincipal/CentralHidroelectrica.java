@@ -2,7 +2,7 @@ package ProgramaPrincipal;
 
 public class CentralHidroelectrica extends UnidadEnergia{
     public CentralHidroelectrica() {
-        super("Central Hidroeléctrica", 120, 30, 25, 3, 2,1);
+        super("Hidroeléctrica", 120, 30, 25, 3, 2,1);
     }
     @Override
     public void habilidad(Unidad objetivo, Tablero tablero) {

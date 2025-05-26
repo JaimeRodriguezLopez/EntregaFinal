@@ -2,7 +2,7 @@ package ProgramaPrincipal;
 
 public class CentralEolica extends UnidadEnergia {
     public CentralEolica() {
-        super("Central Eólica", 100, 25, 20, 4, 2,1);
+        super("Eólica", 100, 25, 20, 4, 2,1);
     }
 
     @Override
