@@ -14,8 +14,8 @@
         </RollingFile>
     </Appenders>
     <Loggers>
-        <!--  avoid duplicated logs with additivity=false  -->
-        <Logger name="es.uah" level="info" additivity="false">
+        <!--  avoid duplicated logs with additivity=false   -->
+        <Logger name="ProgramaPrincipal" level="info" additivity="false">
             <AppenderRef ref="LogToRollingFile"/>
             <AppenderRef ref="LogToConsole"/>
         </Logger>

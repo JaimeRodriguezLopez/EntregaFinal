@@ -12,6 +12,7 @@
             <Label fx:id="labelInfo" text="Selecciona una unidad para empezar" />
             <Button onAction="#onGuardarPartidaClick" text="Guardar partida" />
             <Button fx:id="TerminarButton" onAction="#onTerminarTurnoClick" text="Terminar turno" />
+         <Button fx:id="VolverDesdePartida" mnemonicParsing="false" onAction="#VolverMenuPrincipalButtonClick" text="Volver Menu Principal" />
         </HBox>
     </top>
 

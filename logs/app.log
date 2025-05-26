@@ -1,0 +1,268 @@
+2025-05-26 14:30:15.711 - INFO  - ProgramaPrincipal.Partida - Iniciando nueva partida - Tablero: 20x20
+2025-05-26 14:30:15.714 - INFO  - ProgramaPrincipal.Partida - Unidades del jugador creadas: Central Nuclear en (0,0), Central Eólica en (0,19)
+2025-05-26 14:30:15.714 - INFO  - ProgramaPrincipal.Partida - Unidades IA creadas: Malware y Ransomware posicionados
+2025-05-26 14:30:15.714 - INFO  - ProgramaPrincipal.Partida - Partida inicializada correctamente
+2025-05-26 14:30:24.844 - INFO  - ProgramaPrincipal.Partida - Inicia el turno del jugador.
+2025-05-26 14:30:24.853 - INFO  - ProgramaPrincipal.Partida - Turno jugador - Unidad: Central Nuclear, Acción: MOVER, Destino: (2,0)
+2025-05-26 14:30:24.858 - INFO  - ProgramaPrincipal.Partida - La unidad: Central Nuclear se ha movido hacia (2,0)
+2025-05-26 14:30:38.178 - INFO  - ProgramaPrincipal.Partida - Inicia el turno del jugador.
+2025-05-26 14:30:38.179 - INFO  - ProgramaPrincipal.Partida - Turno jugador - Unidad: Central Eólica, Acción: MOVER, Destino: (0,15)
+2025-05-26 14:30:38.179 - INFO  - ProgramaPrincipal.Partida - La unidad: Central Eólica se ha movido hacia (0,15)
+2025-05-26 14:30:42.567 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Hidroeléctrica e en la posicion: (2,1)
+2025-05-26 14:30:42.568 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Ransomware e en la posicion: (19,1)
+2025-05-26 14:30:42.568 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:30:42.569 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (18, 1)
+2025-05-26 14:30:44.037 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:30:44.038 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Malware se mueva hacia: (18, 0)
+2025-05-26 14:30:44.038 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Hidroeléctrica e en la posicion: (3,0)
+2025-05-26 14:30:44.039 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Phishing e en la posicion: (19,0)
+2025-05-26 14:30:44.528 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:30:44.529 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Phishing se mueva hacia: (19, 0)
+2025-05-26 14:30:44.712 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Eólica e en la posicion: (1,0)
+2025-05-26 14:30:44.713 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Malware e en la posicion: (17,0)
+2025-05-26 14:30:44.713 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:30:44.713 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (17, 1)
+2025-05-26 14:30:44.888 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:30:44.888 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (18, 19)
+2025-05-26 14:30:44.888 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Hidroeléctrica e en la posicion: (0,16)
+2025-05-26 14:30:44.889 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Ransomware e en la posicion: (18,1)
+2025-05-26 14:30:45.067 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:30:45.067 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Malware se mueva hacia: (16, 0)
+2025-05-26 14:30:45.247 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Nuclear e en la posicion: (1,15)
+2025-05-26 14:30:45.247 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Ransomware e en la posicion: (17,0)
+2025-05-26 14:30:45.248 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:30:45.248 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (17, 19)
+2025-05-26 14:30:45.472 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:30:45.472 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (18, 1)
+2025-05-26 14:30:45.473 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Hidroeléctrica e en la posicion: (0,14)
+2025-05-26 14:30:45.473 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Malware e en la posicion: (18,19)
+2025-05-26 14:30:46.425 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:30:46.425 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (18, 1)
+2025-05-26 14:30:47.455 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Eólica e en la posicion: (2,2)
+2025-05-26 14:30:47.456 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Phishing e en la posicion: (17,18)
+2025-05-26 14:30:47.456 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:30:47.456 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (17, 0)
+2025-05-26 14:30:48.342 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:30:48.343 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (16, 1)
+2025-05-26 14:30:48.344 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Eólica e en la posicion: (3,1)
+2025-05-26 14:30:48.344 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Malware e en la posicion: (16,19)
+2025-05-26 14:30:49.231 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:30:49.231 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Phishing se mueva hacia: (19, 0)
+2025-05-26 14:30:50.148 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Nuclear e en la posicion: (1,1)
+2025-05-26 14:30:50.149 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Ransomware e en la posicion: (16,2)
+2025-05-26 14:30:50.149 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:30:50.150 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Malware se mueva hacia: (15, 19)
+2025-05-26 14:30:50.989 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:30:50.990 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (15, 2)
+2025-05-26 14:30:50.990 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Hidroeléctrica e en la posicion: (4,0)
+2025-05-26 14:30:50.991 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Phishing e en la posicion: (16,19)
+2025-05-26 14:30:58.843 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:30:58.843 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (14, 2)
+2025-05-26 14:30:59.654 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Eólica e en la posicion: (0,0)
+2025-05-26 14:30:59.654 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Phishing e en la posicion: (16,2)
+2025-05-26 14:30:59.654 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:30:59.655 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Phishing se mueva hacia: (16, 18)
+2025-05-26 14:31:00.460 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:00.461 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Phishing se mueva hacia: (19, 0)
+2025-05-26 14:31:00.461 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Hidroeléctrica e en la posicion: (0,17)
+2025-05-26 14:31:00.461 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Ransomware e en la posicion: (16,19)
+2025-05-26 14:31:01.246 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:01.247 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (17, 19)
+2025-05-26 14:31:01.829 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Nuclear e en la posicion: (1,16)
+2025-05-26 14:31:01.830 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Phishing e en la posicion: (17,1)
+2025-05-26 14:31:01.830 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:01.830 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Phishing se mueva hacia: (15, 2)
+2025-05-26 14:31:02.003 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:02.004 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Phishing se mueva hacia: (17, 17)
+2025-05-26 14:31:02.004 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Hidroeléctrica e en la posicion: (2,15)
+2025-05-26 14:31:02.004 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Malware e en la posicion: (17,18)
+2025-05-26 14:31:02.171 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:02.171 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Malware se mueva hacia: (15, 0)
+2025-05-26 14:31:02.349 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Eólica e en la posicion: (1,14)
+2025-05-26 14:31:02.349 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Ransomware e en la posicion: (16,2)
+2025-05-26 14:31:02.350 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:02.350 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Phishing se mueva hacia: (15, 18)
+2025-05-26 14:31:02.513 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:02.513 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Malware se mueva hacia: (14, 0)
+2025-05-26 14:31:02.513 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Hidroeléctrica e en la posicion: (0,13)
+2025-05-26 14:31:02.513 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Malware e en la posicion: (16,0)
+2025-05-26 14:31:02.675 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:02.675 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (17, 0)
+2025-05-26 14:31:02.853 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Hidroeléctrica e en la posicion: (2,3)
+2025-05-26 14:31:02.853 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Malware e en la posicion: (15,1)
+2025-05-26 14:31:02.854 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:02.854 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Phishing se mueva hacia: (15, 2)
+2025-05-26 14:31:03.024 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:03.025 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (16, 18)
+2025-05-26 14:31:03.025 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Nuclear e en la posicion: (3,2)
+2025-05-26 14:31:03.026 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Phishing e en la posicion: (16,19)
+2025-05-26 14:31:03.204 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:03.205 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Phishing se mueva hacia: (14, 18)
+2025-05-26 14:31:03.382 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Hidroeléctrica e en la posicion: (1,2)
+2025-05-26 14:31:03.382 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Phishing e en la posicion: (19,1)
+2025-05-26 14:31:03.383 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:03.383 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Phishing se mueva hacia: (19, 0)
+2025-05-26 14:31:03.564 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:03.566 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (17, 19)
+2025-05-26 14:31:03.566 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Eólica e en la posicion: (4,1)
+2025-05-26 14:31:03.566 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Ransomware e en la posicion: (14,1)
+2025-05-26 14:31:03.752 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:03.753 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Phishing se mueva hacia: (13, 18)
+2025-05-26 14:31:03.937 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Eólica e en la posicion: (0,1)
+2025-05-26 14:31:03.939 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Malware e en la posicion: (15,0)
+2025-05-26 14:31:03.939 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:03.939 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Malware se mueva hacia: (16, 0)
+2025-05-26 14:31:04.124 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:04.125 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Phishing se mueva hacia: (19, 1)
+2025-05-26 14:31:04.125 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Nuclear e en la posicion: (5,0)
+2025-05-26 14:31:04.125 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Phishing e en la posicion: (13,0)
+2025-05-26 14:31:04.309 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:04.309 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Malware se mueva hacia: (17, 18)
+2025-05-26 14:31:04.492 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Hidroeléctrica e en la posicion: (0,18)
+2025-05-26 14:31:04.492 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Malware e en la posicion: (18,2)
+2025-05-26 14:31:04.493 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:04.493 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (16, 1)
+2025-05-26 14:31:04.686 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:04.687 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Malware se mueva hacia: (17, 2)
+2025-05-26 14:31:04.687 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Eólica e en la posicion: (1,17)
+2025-05-26 14:31:04.687 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Phishing e en la posicion: (18,2)
+2025-05-26 14:31:04.869 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:04.869 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Malware se mueva hacia: (14, 0)
+2025-05-26 14:31:05.052 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Hidroeléctrica e en la posicion: (2,16)
+2025-05-26 14:31:05.053 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Ransomware e en la posicion: (19,19)
+2025-05-26 14:31:05.053 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:05.053 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Phishing se mueva hacia: (18, 2)
+2025-05-26 14:31:05.246 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:05.247 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (16, 2)
+2025-05-26 14:31:05.247 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Nuclear e en la posicion: (3,15)
+2025-05-26 14:31:05.247 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Ransomware e en la posicion: (18,18)
+2025-05-26 14:31:05.429 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:05.430 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Phishing se mueva hacia: (12, 18)
+2025-05-26 14:31:05.623 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Eólica e en la posicion: (2,14)
+2025-05-26 14:31:05.624 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Phishing e en la posicion: (18,17)
+2025-05-26 14:31:05.624 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:05.624 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Phishing se mueva hacia: (18, 2)
+2025-05-26 14:31:05.800 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:05.800 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Malware se mueva hacia: (17, 18)
+2025-05-26 14:31:05.801 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Eólica e en la posicion: (1,13)
+2025-05-26 14:31:05.801 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Ransomware e en la posicion: (17,16)
+2025-05-26 14:31:05.987 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:05.987 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Phishing se mueva hacia: (15, 2)
+2025-05-26 14:31:06.170 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Hidroeléctrica e en la posicion: (0,12)
+2025-05-26 14:31:06.170 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Ransomware e en la posicion: (16,17)
+2025-05-26 14:31:06.171 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:06.171 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (17, 0)
+2025-05-26 14:31:06.340 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:06.341 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Phishing se mueva hacia: (17, 17)
+2025-05-26 14:31:06.341 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Nuclear e en la posicion: (2,4)
+2025-05-26 14:31:06.341 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Ransomware e en la posicion: (15,18)
+2025-05-26 14:31:06.540 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:06.541 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Phishing se mueva hacia: (12, 0)
+2025-05-26 14:31:06.733 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Nuclear e en la posicion: (3,3)
+2025-05-26 14:31:06.734 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Phishing e en la posicion: (13,0)
+2025-05-26 14:31:06.734 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:06.734 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (13, 1)
+2025-05-26 14:31:06.938 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:06.938 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Malware se mueva hacia: (14, 0)
+2025-05-26 14:31:06.939 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Hidroeléctrica e en la posicion: (1,3)
+2025-05-26 14:31:06.939 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Ransomware e en la posicion: (14,1)
+2025-05-26 14:31:07.128 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:07.129 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (13, 2)
+2025-05-26 14:31:07.318 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Hidroeléctrica e en la posicion: (4,2)
+2025-05-26 14:31:07.318 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Phishing e en la posicion: (14,19)
+2025-05-26 14:31:07.318 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:07.319 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Malware se mueva hacia: (18, 19)
+2025-05-26 14:31:07.515 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:07.515 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Malware se mueva hacia: (16, 0)
+2025-05-26 14:31:07.516 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Nuclear e en la posicion: (0,2)
+2025-05-26 14:31:07.516 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Malware e en la posicion: (13,3)
+2025-05-26 14:31:07.700 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:07.700 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (12, 1)
+2025-05-26 14:31:07.894 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Hidroeléctrica e en la posicion: (5,1)
+2025-05-26 14:31:07.894 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Malware e en la posicion: (14,2)
+2025-05-26 14:31:07.895 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:07.895 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (11, 1)
+2025-05-26 14:31:08.091 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:08.091 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Malware se mueva hacia: (14, 0)
+2025-05-26 14:31:08.091 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Hidroeléctrica e en la posicion: (6,0)
+2025-05-26 14:31:08.092 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Phishing e en la posicion: (13,1)
+2025-05-26 14:31:08.281 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:08.282 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Malware se mueva hacia: (17, 2)
+2025-05-26 14:31:08.491 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Eólica e en la posicion: (0,19)
+2025-05-26 14:31:08.491 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Malware e en la posicion: (12,2)
+2025-05-26 14:31:08.492 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:08.492 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Malware se mueva hacia: (18, 0)
+2025-05-26 14:31:08.676 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:08.677 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Malware se mueva hacia: (16, 0)
+2025-05-26 14:31:08.677 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Nuclear e en la posicion: (1,18)
+2025-05-26 14:31:08.677 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Malware e en la posicion: (12,19)
+2025-05-26 14:31:08.874 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:08.875 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Phishing se mueva hacia: (17, 17)
+2025-05-26 14:31:09.075 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Hidroeléctrica e en la posicion: (2,17)
+2025-05-26 14:31:09.075 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Malware e en la posicion: (13,18)
+2025-05-26 14:31:09.075 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:09.075 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Malware se mueva hacia: (11, 19)
+2025-05-26 14:31:09.272 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:09.273 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Phishing se mueva hacia: (17, 1)
+2025-05-26 14:31:09.273 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Hidroeléctrica e en la posicion: (3,16)
+2025-05-26 14:31:09.274 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Malware e en la posicion: (12,19)
+2025-05-26 14:31:09.449 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:09.449 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (19, 19)
+2025-05-26 14:31:09.636 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Eólica e en la posicion: (4,15)
+2025-05-26 14:31:09.636 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Ransomware e en la posicion: (12,17)
+2025-05-26 14:31:09.637 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:09.637 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Phishing se mueva hacia: (12, 1)
+2025-05-26 14:31:09.823 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:09.823 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (19, 19)
+2025-05-26 14:31:09.823 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Hidroeléctrica e en la posicion: (3,14)
+2025-05-26 14:31:09.823 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Phishing e en la posicion: (13,1)
+2025-05-26 14:31:10.014 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:10.014 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Malware se mueva hacia: (13, 18)
+2025-05-26 14:31:10.190 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Hidroeléctrica e en la posicion: (2,13)
+2025-05-26 14:31:10.191 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Malware e en la posicion: (11,18)
+2025-05-26 14:31:10.191 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:10.191 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Phishing se mueva hacia: (13, 19)
+2025-05-26 14:31:10.380 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:10.381 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Malware se mueva hacia: (14, 0)
+2025-05-26 14:31:10.381 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Eólica e en la posicion: (1,12)
+2025-05-26 14:31:10.381 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Malware e en la posicion: (14,19)
+2025-05-26 14:31:10.572 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:10.572 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Malware se mueva hacia: (15, 19)
+2025-05-26 14:31:10.750 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Nuclear e en la posicion: (0,11)
+2025-05-26 14:31:10.751 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Phishing e en la posicion: (15,3)
+2025-05-26 14:31:10.751 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:10.751 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Malware se mueva hacia: (15, 1)
+2025-05-26 14:31:10.921 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:10.922 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (16, 1)
+2025-05-26 14:31:10.922 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Eólica e en la posicion: (2,5)
+2025-05-26 14:31:10.922 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Phishing e en la posicion: (16,3)
+2025-05-26 14:31:11.109 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:11.110 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Phishing se mueva hacia: (13, 0)
+2025-05-26 14:31:11.304 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Eólica e en la posicion: (3,4)
+2025-05-26 14:31:11.304 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Malware e en la posicion: (19,2)
+2025-05-26 14:31:11.304 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:11.305 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Phishing se mueva hacia: (13, 19)
+2025-05-26 14:31:11.511 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:11.512 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (14, 1)
+2025-05-26 14:31:11.512 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Eólica e en la posicion: (1,4)
+2025-05-26 14:31:11.512 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Malware e en la posicion: (11,2)
+2025-05-26 14:31:11.707 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:11.707 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Phishing se mueva hacia: (13, 19)
+2025-05-26 14:31:11.893 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Eólica e en la posicion: (4,3)
+2025-05-26 14:31:11.894 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Malware e en la posicion: (11,0)
+2025-05-26 14:31:11.894 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:11.894 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (14, 1)
+2025-05-26 14:31:12.082 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:12.083 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Malware se mueva hacia: (14, 0)
+2025-05-26 14:31:12.083 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Eólica e en la posicion: (0,3)
+2025-05-26 14:31:12.083 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Malware e en la posicion: (10,1)
+2025-05-26 14:31:12.289 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:12.289 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Phishing se mueva hacia: (18, 2)
+2025-05-26 14:31:12.498 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Eólica e en la posicion: (5,2)
+2025-05-26 14:31:12.498 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Ransomware e en la posicion: (17,3)
+2025-05-26 14:31:12.498 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:12.498 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Malware se mueva hacia: (18, 19)
+2025-05-26 14:31:12.713 - INFO  - ProgramaPrincipal.Partida - Iniciando el turno de nuestra IA
+2025-05-26 14:31:12.713 - INFO  - ProgramaPrincipal.Partida - La IA ha decidido que: Ransomware se mueva hacia: (16, 2)
+2025-05-26 14:31:12.713 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Central Eólica e en la posicion: (6,1)
+2025-05-26 14:31:12.714 - INFO  - ProgramaPrincipal.Partida - La nueva unidad: Ransomware e en la posicion: (18,3)
